@@ -1,6 +1,22 @@
-<h1>Editing Chat</h1>
+<div class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <h1 class="title">Editing Chat</h1>
+          <%= render 'form', chat: @chat %>
+      </div>
+    </div>
+  </div>
+</div>
 
-<%= render 'form', chat: @chat %>
-
-<%= link_to 'Show', @chat %> |
-<%= link_to 'Back', chats_path %>
+<nav class="navbar is-fixed-bottom">
+  <div class="navbar-menu">
+    <div class="navbar-item">
+      <div class="field is-grouped">
+        <div class="control">
+          <%= link_to 'Cancel', chats_path, class: "button is-dark" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
