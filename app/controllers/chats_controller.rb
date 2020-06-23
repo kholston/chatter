@@ -1,5 +1,6 @@
 class ChatsController < ApplicationController
   before_action :set_chat, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   # GET /chats
   # GET /chats.json
@@ -15,7 +16,7 @@ class ChatsController < ApplicationController
 
   # GET /chats/new
   def new
-    @chat = Chat.new
+    @chat = current_user.chats.build
   end
 
   # GET /chats/1/edit
@@ -25,7 +26,7 @@ class ChatsController < ApplicationController
   # POST /chats
   # POST /chats.json
   def create
-    @chat = Chat.new(chat_params)
+    @chat = current_user.chats.build(chat_params)
 
     respond_to do |format|
       if @chat.save
