@@ -1,24 +1,14 @@
-# README
+# Chatter
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Chatter is a basic clone of twitter written in Ruby on Rails
 
-Things you may want to cover:
+Gems it uses are as follows:
 
-* Ruby version
+* Devise for user authentification
 
-* System dependencies
+* Bulma for CSS styling
 
-* Configuration
+* Simple Form for easier Rails form creation
 
-* Database creation
+* Better Errors for more verbose error pages
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
